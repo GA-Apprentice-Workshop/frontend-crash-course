@@ -1,21 +1,5 @@
-#FEWD for UXDI
+# Frontend Crash Course
 
 <hr>
 
-
-[Day 1](day1/README.md)
--
-
-- FEWD? WTF?
-- Developer tools and technologies
-- Intro to HTML + exercises 
-- Intro to CSS
-
-
-[Day 2](day2/README.md)
--
-
-- Review HTML and CSS
-- Introduce more advanced web design concepts
-- Intro to Bootstrap
-- Lab time
+The Frontend Crash Course is designed to give basic knowledge and understanding of what it takes to build web pages. By the end of the session, students will know how to create and style web pages. For question and resources, see the wiki.
