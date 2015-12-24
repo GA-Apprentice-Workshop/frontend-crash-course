@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascripting</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+<header>
+    <h1>Welcome to Javascripting</h1>
+    <h3>Fill out the form to enter!</h3>
+</header>
+<nav>
+    <ul id="nav">
+        <li><a href="/">Home</a></li><!--
+     --><li class="user-content"><a href="#">Design</a></li><!--
+     --><li class="user-content"><a href="#">Effects</a></li><!--
+     --><li class="user-content"><a href="#">Resources</a></li>
+        <li class="user-content"><button onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+<section class="content">
+    <div class="login-form">
+        <form id="login">
+            <input id="username" type="text" placeholder="Username">
+            <input id="password" type="password" placeholder="Password">
+        </form>
+        <button type="submit" form="login" onclick="login()">Login</button>
+    </div>
+</section>
+    
+</div>
+
+<script>
+    // Grab the page elements so we can manipulate them.
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    var userContent = document.querySelectorAll('.user-content');
+    var loginForm = document.querySelectorAll('.login-form')
+
+    // Database
+    var credentials = {
+            username: "skipper",
+            password: "no"
+    }
+
+    // Authentication  - Logging in and out
+    function login() {
+        console.log(username.value);
+        if (credentials.username == username.value & 
+            credentials.password == password.value) {
+            sessionStorage.setItem('loggedIn', 'true');
+            unauthorized(loginForm);
+            authorized(userContent);
+        } else {
+            alert("Invalid credentials. Try again.");
+        }
+    }
+
+    function logout() {
+        sessionStorage.setItem('loggedIn', 'false');
+        authorized(loginForm);
+        unauthorized(userContent);
+    }
+
+    // Authorization - Permission to view page items
+
+    function unauthorized(elms) {
+        // Users not logged in cannot view the menu
+        for (var i = 0; i < elms.length; i++) {
+            elms[i].style.display = 'none';
+        }
+    }
+
+    function authorized(elms) {
+        // Users logged in can view the menu
+        for (var i = 0; i < elms.length; i++) {
+            elms[i].style.display = 'block';
+        }
+    }
+
+    // Check authorization on page refresh
+    if (sessionStorage.getItem('loggedIn') == 'false') {
+        unauthorized(userContent);
+        authorized(loginForm);
+    } else if (sessionStorage.getItem('loggedIn') == 'true') {
+        authorized(userContent);
+        unauthorized(loginForm);
+    }
+
+</script>
+</body>
+</html>
