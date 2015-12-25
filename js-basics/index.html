@@ -3,6 +3,7 @@
 <head>
     <title>Javascripting</title>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
 
@@ -13,11 +14,11 @@
 </header>
 <nav>
     <ul id="nav">
-        <li><a href="/">Home</a></li><!--
-     --><li class="user-content"><a href="#">Design</a></li><!--
-     --><li class="user-content"><a href="#">Effects</a></li><!--
-     --><li class="user-content"><a href="#">Resources</a></li>
-        <li class="user-content"><button onclick="logout()">Logout</a></li>
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="user-content item"><a href="#">Design</a></li>
+        <li class="user-content item"><a href="#">Effects</a></li>
+        <li class="user-content item"><a href="#">Resources</a></li>
+        <li class="user-content item"><button onclick="logout()">Logout</button></li>
     </ul>
 </nav>
 <section class="content">
@@ -42,7 +43,7 @@
     // Database
     var credentials = {
             username: "skipper",
-            password: "no"
+            password: "password"
     }
 
     // Authentication  - Logging in and out
@@ -76,7 +77,7 @@
     function authorized(elms) {
         // Users logged in can view the menu
         for (var i = 0; i < elms.length; i++) {
-            elms[i].style.display = 'block';
+            elms[i].style.display = 'inline';
         }
     }
 
