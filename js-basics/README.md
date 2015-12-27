@@ -15,8 +15,8 @@ _What you need:_
 The Codepen account simply  makes it easy for you to have working code samples. Think of it as a code notebook of sorts filled with live, working examples of designs and tricks.
 
 ## Workshop Structure
-
 There are a few key things you pay attention to:
+
 - Lesson titles: They indicate what stage in the web development process we're working in. These will not always be in order, but you can check out the wiki to understand them better.
 - Time: The time noted next to each lesson is how long it took professionals like myself to complete the task. 
 - Challenges: These are intended for people with working knowledge of web development. 
@@ -27,7 +27,6 @@ Since everyone will have different levels of knowledge about web development, th
 Programming languages, like all others, is best with reference tools at hand (like dictionaries or spellcheckers). It takes years to memorize and know the information well, so open the following tools in separate tabs so you have them at hand.
 
 - [Javascript MDN Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-- 
 
 All code is available right here. See the wiki for more information.
 
