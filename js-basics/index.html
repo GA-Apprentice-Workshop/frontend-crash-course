@@ -2,7 +2,15 @@
 <html>
 <head>
     <title>Javascripting</title>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <style>
+        ul#nav a {
+            padding: 10px;
+        }
+
+        #nav li.item {
+            display: inline;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,11 +21,11 @@
 </header>
 <nav>
     <ul id="nav">
-        <li><a href="/">Home</a></li><!--
-     --><li class="user-content"><a href="#">Design</a></li><!--
-     --><li class="user-content"><a href="#">Effects</a></li><!--
-     --><li class="user-content"><a href="#">Resources</a></li>
-        <li class="user-content"><button onclick="logout()">Logout</a></li>
+        <li class="item"><a href="/">Home</a></li>
+        <li class="item user-content"><a href="#">Design</a></li>
+        <li class="item user-content"><a href="#">Effects</a></li>
+        <li class="item user-content"><a href="#">Resources</a></li>
+        <li class="item user-content"><button onclick="logout()">Logout</a></li>
     </ul>
 </nav>
 <section class="content">
